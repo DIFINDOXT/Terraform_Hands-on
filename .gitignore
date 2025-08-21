@@ -1,0 +1,18 @@
+# Terraform
+**/.terraform/*
+.terraform*
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+crash.*.log
+.terraform.lock.hcl
+
+# Sensitive vars (keep local only)
+*.tfvars
+*.tfvars.json
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
