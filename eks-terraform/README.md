@@ -27,6 +27,9 @@ eks-terraform/
 │ └── ca-trust.template.json
 ├── docs/screenshots/ # Screenshots of key steps
 └── .gitignore
+├── PROJECT_OVERVIEW.md
+├── README.md ((Hi You Are Here))
+├── challenges.md
 ```
 ---
 
