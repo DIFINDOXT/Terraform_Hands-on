@@ -10,7 +10,7 @@ Screenshots are linked inline for each major step.
 - Wrote core Terraform files (`provider.tf`, `versions.tf`, `vpc.tf`, `eks.tf`, `securitygroups.tf`, `outputs.tf`, `variables.tf`, `locals.tf`).
 - Initialized Terraform and downloaded required AWS & Kubernetes providers.
 
-📸 [Terraform Init](/docs/screenshots/init.png)
+📸 [Terraform Init](docs/screenshots/init.png)
 
 ---
 
@@ -19,7 +19,7 @@ Screenshots are linked inline for each major step.
 - Ensured Terraform code is valid and supported.
 - Fixed provider version mismatches & updated `versions.tf`.
 
-📸 [Terraform Validate](/docs/screenshots/validate.png)
+📸 [Terraform Validate](docs/screenshots/validate.png)
 
 ---
 
@@ -38,7 +38,7 @@ Screenshots are linked inline for each major step.
 - Applied the plan with `terraform apply`.
 - Waited ~10–12 minutes for EKS cluster + managed node group (2 min, 6 max) to be created.
 
-📸 [Terraform Apply](/docs/screenshots/apply.png)
+📸 [Terraform Apply](docs/screenshots/apply.png)
 
 ---
 
@@ -46,7 +46,7 @@ Screenshots are linked inline for each major step.
 
 - Updated local kubeconfig to connect `kubectl` with the new EKS cluster.
 
-📸 [Update Kubeconfig](/docs/screenshots/update-kubeconfig.png)
+📸 [Update Kubeconfig](docs/screenshots/update-kubeconfig.png)
 
 ---
 
@@ -55,7 +55,7 @@ Screenshots are linked inline for each major step.
 - Verified cluster connection with `kubectl get nodes`.
 - Saw 2 nodes registered (t3.medium) with desired capacity.
 
-📸 [Get Nodes](/docs/screenshots/get-nodes.png)
+📸 [Get Nodes](docs/screenshots/get-nodes.png)
 
 ---
 # 🚀 EKS Cluster with Terraform – Project Overview (Part 2/3)
@@ -71,13 +71,13 @@ After `terraform apply`, verified all networking resources:
 - Single NAT Gateway
 - Route tables, NACLs, and Security Groups
 
-📸 [VPC](/docs/screenshots/shubhxt-eks-vpc.png)
-📸 [VPC Tags](/docs/screenshots/shubhxt-eks-vpc-tags.png) 
-📸 [Subnets](/docs/screenshots/subnets-vpc.png) 
-📸 [NAT Gateway](/docs/screenshots/nat-gateway-vpc.png) 
-📸 [Route Tables](/docs/screenshots/route-tables-vpc.png) 
-📸 [Security Groups](/docs/screenshots/security-groups-vpc.png) 
-📸 [NACL](/docs/screenshots/nacl-vpc.png)
+📸 [VPC](docs/screenshots/shubhxt-eks-vpc.png)
+📸 [VPC Tags](docs/screenshots/shubhxt-eks-vpc-tags.png) 
+📸 [Subnets](docs/screenshots/subnets-vpc.png) 
+📸 [NAT Gateway](docs/screenshots/nat-gateway-vpc.png) 
+📸 [Route Tables](docs/screenshots/route-tables-vpc.png) 
+📸 [Security Groups](docs/screenshots/security-groups-vpc.png) 
+📸 [NACL](docs/screenshots/nacl-vpc.png)
 
 ---
 
@@ -86,8 +86,8 @@ After `terraform apply`, verified all networking resources:
 - Installed **EKS metrics-server** add-on from AWS.
 - Verified with `kubectl top nodes`.
 
-📸 [Metrics Server Active](/docs/screenshots/metrics-server.png) 
-📸 [kubectl top nodes](/docs/screenshots/kubectl-top-nodes.png)
+📸 [Metrics Server Active](docs/screenshots/metrics-server.png) 
+📸 [kubectl top nodes](docs/screenshots/kubectl-top-nodes.png)
 
 ---
 
@@ -97,9 +97,9 @@ After `terraform apply`, verified all networking resources:
 - Created IAM Role (`EKS-ClusterAutoscaler-Role`) with OIDC trust 
 - Applied `ca.yaml` to deploy the Cluster Autoscaler pod
 
-📸 [Autoscaler IAM Policy](/docs/screenshots/ca-policy.png)
-📸 [Autoscaler IAM Role](/docs/screenshots/ca-trust.png)
-📸 [Autoscaler Deployment](/docs/screenshots/ca-deploy.png)
+📸 [Autoscaler IAM Policy](docs/screenshots/ca-policy.png)
+📸 [Autoscaler IAM Role](docs/screenshots/ca-trust.png)
+📸 [Autoscaler Deployment](docs/screenshots/ca-deploy.png)
 
 ---
 
@@ -110,8 +110,8 @@ After `terraform apply`, verified all networking resources:
   - Too many pods per node
 - Fixed by scaling node group desired size and re-checking logs.
 
-📸 [Autoscaler Pending](../docs/screenshots/ca-pending.png) 
-📸 [Autoscaler Logs](../docs/screenshots/ca-logs.png)
+📸 [Autoscaler Pending](docs/screenshots/ca-pending.png) 
+📸 [Autoscaler Logs](docs/screenshots/ca-logs.png)
 
 ---
 
