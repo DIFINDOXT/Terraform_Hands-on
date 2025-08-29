@@ -1,0 +1,30 @@
+# Terraform working dirs
+.terraform/
+# State files (never commit)
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate
+crash.log
+crash.*.log
+
+# Plans (local only)
+*.plan
+plan.out
+
+# Local artifacts
+*.pem
+*.key
+*.crt
+
+# Keep lockfile for reproducible builds (do NOT ignore)
+#! .terraform.lock.hcl
+
+# Local-only autoscaler JSONs (we'll commit templates instead)
+extras/cluster-autoscaler/ca-policy.json
+extras/cluster-autoscaler/ca-trust.json
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
