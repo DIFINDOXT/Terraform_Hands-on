@@ -155,3 +155,5 @@ This file tracks each step of the project as we implement it, one by one.
 - Manual install validated final Nginx setup.
 - This project demonstrates **multi-tool DevOps integration** and clear documentation of both successes and failures.
 
+📸 Screenshots:
+![Terraform Destroy](./screenshots/spacelift-terraform_destroy.png)
