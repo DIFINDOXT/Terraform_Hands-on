@@ -47,6 +47,14 @@ resource "aws_security_group" "ssh_demo" {
     cidr_blocks = [var.ssh_ingress_cidr] # default 0.0.0.0/0; restrict to your IP for safety
   }
 
+   ingress {
+    description = "HTTP"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # for demo; tighten to your IP in real use
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -73,6 +81,7 @@ locals {
     instance2 = { ami = data.aws_ami.ubuntu.id, instance_type = "t2.micro" }
     instance3 = { ami = data.aws_ami.ubuntu.id, instance_type = "t2.micro" }
     instance4 = { ami = data.aws_ami.ubuntu.id, instance_type = "t2.micro" }
+    instance5 = { ami = data.aws_ami.ubuntu.id, instance_type = "t2.micro" }
   }
 }
 
