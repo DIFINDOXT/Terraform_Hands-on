@@ -29,7 +29,7 @@
 
     - name: Create index.html
       ansible.builtin.copy:
-        dest: /usr/share/nginx/html/index.html
+        dest: /var/www/html/index.html
         content: |
           <!DOCTYPE html>
           <html>
