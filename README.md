@@ -1,22 +1,55 @@
-# Terraform Hands-on
+# 🌍 Terraform Projects – Infrastructure as Code (IaC)
 
-Small, recruiter-friendly Terraform practice repo. Each day adds a tiny, focused exercise (EC2 basics, multi-region, modules, etc.) with code + short notes. No secrets are stored in this repo.
-
-## What’s inside
-- `day-01-ec2-basic/` — minimal EC2 example scaffold (you’ll add code)
-- `media/` — screenshots or short screen recordings (trim/mask creds)
-
-## Goals
-- Show practical Terraform skills, module usage, and safe workflows
-- Keep changes small and readable for quick review
-
-## Security & privacy (important)
-- Never commit AWS keys, tokens, or `*.tfvars` with secrets
-- Mask terminal and cloud console while recording
-- Use env vars or a local, git-ignored `*.tfvars` for sensitive values
-
-## Media notes
-- You can commit short MP4s/GIFs in `media/` (keep sizes small). 
-  For longer videos, upload to X/Twitter or elsewhere and link from Day notes.
+This folder showcases my **Terraform hands-on practice and projects**, as part of my DevOps transition journey.  
+It contains multiple **subprojects**, each focused on provisioning and managing cloud infrastructure in a modular, production-ready way.
 
 ---
+
+## 📂 What’s Inside
+
+Each subfolder = one Terraform project.  
+Each project includes:  
+- ✅ `main.tf`, `variables.tf`, `outputs.tf` (core IaC definitions)  
+- ✅ `docs/` with project overview & architecture notes  
+- ✅ `screenshots/` with real `terraform plan/apply` outputs  
+- ✅ `challenges.md` documenting errors & how I solved them  
+
+---
+
+## 🚀 Projects Covered
+
+| Project | Cloud/Infra Focus | Tools/Concepts |
+|---------|------------------|----------------|
+| `eks-cluster/` | EKS cluster provisioning on AWS | VPC, Subnets, NAT Gateway, EKS, Security Groups |
+| `spacelift-pipeline/` | Orchestration of Terraform + Ansible workflows | Spacelift, Terraform, Ansible |
+| *(more coming...)* | EC2, S3, IAM, Monitoring | Terraform modules, remote state, workspaces |
+
+---
+
+## 🛠️ Skills Demonstrated
+
+- Infrastructure as Code (IaC) best practices  
+- Modular Terraform design  
+- VPC networking (subnets, route tables, NAT, IGW)  
+- Kubernetes cluster provisioning on AWS (EKS)  
+- State management, validation, and plan/apply workflows  
+- Debugging & handling Terraform errors (`terraform validate`, `terraform plan`)  
+
+---
+
+## 📸 Example Screenshot
+
+Terraform Plan Example:
+
+![Terraform Plan](./eks-cluster/docs/screenshots/terraform_plan.png)
+
+---
+
+## 📖 How to Navigate
+
+- Go into each subproject (e.g., `eks-cluster/`) to view code + docs.  
+- Each project folder has its own **README.md** explaining architecture, commands, and challenges.  
+
+---
+
+💡 **Note:** This repo is for **Terraform-only focus**. If you want to see **end-to-end DevOps projects** (IaC + CI/CD + monitoring), check my main GitHub account projects.
