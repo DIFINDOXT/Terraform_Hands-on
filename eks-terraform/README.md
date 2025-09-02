@@ -11,25 +11,23 @@ It replicates a real-world organizational setup:
 
 ## 📂 Project Structure
 ```
-eks-terraform/
-├── infra/ # Core Terraform files
-│ ├── eks.tf
-│ ├── vpc.tf
-│ ├── securitygroups.tf
-│ ├── versions.tf
-│ ├── provider.tf
-│ ├── locals.tf
-│ ├── variables.tf
-│ └── outputs.tf
-├── extras/cluster-autoscaler/ # Optional production add-ons
-│ ├── ca.yaml
-│ ├── ca-policy.template.json
-│ └── ca-trust.template.json
-├── docs/screenshots/ # Screenshots of key steps
-└── .gitignore
-├── PROJECT_OVERVIEW.md
-├── README.md ((Hi You Are Here))
-├── challenges.md
+├── README.md  (Hi, You are Here)
+├── docs
+│   ├── PROJECT_OVERVIEW.md
+│   ├── challenges.md
+│   └── screenshots
+├── extras
+│   └── cluster-autoscaler
+├── infra
+│   ├── backend.tf
+│   ├── eks.tf
+│   ├── locals.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── securitygroups.tf
+│   ├── variables.tf
+│   ├── versions.tf
+│   └── vpc.tf
 ```
 ---
 
