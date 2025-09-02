@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: cluster-autoscaler
     app.kubernetes.io/part-of: cluster-autoscaler
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::695128592265:role/EKS-ClusterAutoscaler-Role
+    eks.amazonaws.com/role-arn: arn:aws:iam::--------------:role/EKS-ClusterAutoscaler-Role
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
