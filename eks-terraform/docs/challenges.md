@@ -8,6 +8,7 @@ It demonstrates not only the setup but also **debugging and problem-solving skil
 ## 1️⃣ Terraform Validation Errors
 **Issue:** 
 `terraform validate` failed with errors about unsupported block types (`elastic_gpu_specifications`, `elastic_inference_accelerator`). 
+![Terraform Validate Error](./screenshots/error-terraform_validate.png)
 
 **Cause:** 
 Mismatch between the Terraform AWS provider version and the EKS module version. 
@@ -16,6 +17,7 @@ Mismatch between the Terraform AWS provider version and the EKS module version.
 - Updated `versions.tf` to newer provider versions. 
 - Cleaned `.terraform/` and lock files → re-ran `terraform init -upgrade`. 
 - Revalidated successfully.
+![Terraform Validate Success](./screenshots/success-terraform_validate.png)
 
 ---
 
@@ -23,6 +25,7 @@ Mismatch between the Terraform AWS provider version and the EKS module version.
 **Issue:** 
 Cluster creation failed:
 InvalidParameterException: unsupported Kubernetes version 1.27
+![Terraform Apply Error](./screenshots/error-terraform_apply.png)
 
 **Cause:** 
 EKS no longer supported version `1.27` for new clusters in the chosen AWS region. 
@@ -30,6 +33,7 @@ EKS no longer supported version `1.27` for new clusters in the chosen AWS region
 **Fix:** 
 - Updated `variables.tf` to use a supported version (e.g., `1.29`). 
 - Re-ran `terraform apply` → Cluster created successfully.
+![Terraform Apply Success](./screenshots/success-terraform_apply.png)
 
 ---
 
@@ -37,7 +41,7 @@ EKS no longer supported version `1.27` for new clusters in the chosen AWS region
 **Issue:** 
 After kubeconfig update, running `kubectl get nodes` returned:
 Error from server (Forbidden): User "arn:aws:iam::<account>:root" cannot list resource "nodes"
-
+![EKS Cluster No Node Access](./screenshots/error-nodes.png)
 
 **Cause:** 
 EKS does not automatically grant cluster-admin rights to the root IAM user. 
@@ -46,6 +50,7 @@ EKS does not automatically grant cluster-admin rights to the root IAM user.
 - Created an **Access Entry** in the EKS console. 
 - Attached `eks cluster admin policy` to root user ARN. 
 - Verified with `kubectl get nodes` → success.
+![EKS Cluster Nodes Access](./screenshots/kubectl_get_nodes-o_wide-ui.png)
 
 ---
 
@@ -55,9 +60,10 @@ Autoscaler pod status: `Pending`
 Events showed:
 
 0/2 nodes are available: 1 Insufficient memory, 2 Too many pods
-
+![Cluster Autoscaler Pod Pending](./screenshots/cluster_autoscaler_pod_pending.png)
 
 **Cause:** 
+- Insufficient Memory.
 - Node group capacity was too low for the Autoscaler pod’s resource requests. 
 - Node scheduling constraints. 
 
